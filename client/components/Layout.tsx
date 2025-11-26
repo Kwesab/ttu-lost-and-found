@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-slate-50 to-slate-100">
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -19,6 +24,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <span className="text-xs text-slate-500 group-hover:text-slate-600 transition-colors">Takoradi Technical University</span>
             </div>
           </Link>
+          {/* Desktop Navigation */}
           <nav className="hidden sm:flex items-center gap-8">
             <Link to="/" className="text-slate-600 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 font-medium transition-all duration-300 relative group">
               Home
@@ -41,6 +47,54 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-pink-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <button className="sm:hidden p-2 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-300">
+                <Menu className="h-6 w-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] sm:hidden">
+              <div className="flex flex-col gap-6 mt-8">
+                <Link 
+                  to="/" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-300"
+                >
+                  Home
+                </Link>
+                <Link 
+                  to="/lost" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-300"
+                >
+                  Lost Items
+                </Link>
+                <Link 
+                  to="/found" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all duration-300"
+                >
+                  Found Items
+                </Link>
+                <Link 
+                  to="/my-claims" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-green-700 hover:text-green-600 hover:bg-green-50 px-4 py-3 rounded-lg transition-all duration-300"
+                >
+                  My Claims
+                </Link>
+                <Link 
+                  to="/admin" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-lg font-medium text-red-700 hover:text-red-600 hover:bg-red-50 px-4 py-3 rounded-lg transition-all duration-300"
+                >
+                  Admin
+                </Link>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
       <main className="flex-1 w-full">
