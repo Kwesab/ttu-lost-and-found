@@ -102,7 +102,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </main>
       <footer className="bg-gradient-to-br from-white to-slate-50 border-t border-slate-200/50 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="flex flex-col items-center md:items-start">
               <div className="flex items-center gap-3 mb-2">
                 <img
@@ -116,14 +116,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 Reconnecting TTU community
               </p>
             </div>
-            <div className="flex flex-col items-center">
-              <h4 className="font-semibold text-slate-900 mb-3">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-slate-600 text-center">
-                <li><Link to="/" className="hover:text-blue-600 transition-colors">Home</Link></li>
-                <li><Link to="/lost" className="hover:text-blue-600 transition-colors">Lost Items</Link></li>
-                <li><Link to="/found" className="hover:text-blue-600 transition-colors">Found Items</Link></li>
-              </ul>
-            </div>
             <div className="flex flex-col items-center md:items-end">
               <h4 className="font-semibold text-slate-900 mb-3">Get Help</h4>
               <p className="text-sm text-slate-600">Have questions?</p>
@@ -132,7 +124,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <div className="border-t border-slate-200 pt-8">
             <p className="text-center text-slate-600 text-sm">
-              &copy; 2024 Takoradi Technical University Lost & Found. Help your community find what matters.
+              &copy; 2025 Takoradi Technical University Lost & Found. Help your community find what matters.
             </p>
           </div>
         </div>
