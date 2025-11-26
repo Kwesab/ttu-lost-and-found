@@ -14,9 +14,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-yellow-400 rounded-lg opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-300"></div>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fd3e5efc7369e4f42922463a207b8e5f8%2Fed98ff7e99bc4e99a7c401332ea6be22?format=webp&width=800"
-                alt="Takoradi Technical University Logo"
-                className="h-14 w-14 object-contain relative group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+                src="/ttu-logo.png"
+                alt="Takoradi Technical University 70th Anniversary Logo"
+                className="h-16 w-16 object-contain relative group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
               />
             </div>
             <div className="flex flex-col">
@@ -106,9 +106,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-col items-center md:items-start">
               <div className="flex items-center gap-3 mb-2">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fd3e5efc7369e4f42922463a207b8e5f8%2Fed98ff7e99bc4e99a7c401332ea6be22?format=webp&width=800"
-                  alt="Takoradi Technical University Logo"
-                  className="h-12 w-12 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+                  src="/ttu-logo.png"
+                  alt="Takoradi Technical University 70th Anniversary Logo"
+                  className="h-14 w-14 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm"
                 />
                 <span className="font-bold text-slate-900">Lost & Found</span>
               </div>
