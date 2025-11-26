@@ -14,9 +14,9 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-yellow-400 rounded-lg opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-300"></div>
               <img
-                src="/ttu-logo.png"
-                alt="Takoradi Technical University 70th Anniversary Logo"
-                className="h-16 w-16 object-contain relative group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fd3e5efc7369e4f42922463a207b8e5f8%2Fed98ff7e99bc4e99a7c401332ea6be22?format=webp&width=800"
+                alt="Takoradi Technical University Logo"
+                className="h-14 w-14 object-contain relative group-hover:scale-110 transition-transform duration-300 drop-shadow-sm"
               />
             </div>
             <div className="flex flex-col">
@@ -100,31 +100,52 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-1 w-full">
         {children}
       </main>
-      <footer className="bg-gradient-to-br from-white to-slate-50 border-t border-slate-200/50 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="flex flex-col items-center md:items-start">
-              <div className="flex items-center gap-3 mb-2">
-                <img
-                  src="/ttu-logo.png"
-                  alt="Takoradi Technical University 70th Anniversary Logo"
-                  className="h-14 w-14 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm"
-                />
-                <span className="font-bold text-slate-900">Lost & Found</span>
+      <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white mt-16 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Main content */}
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center gap-4 mb-6">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fd3e5efc7369e4f42922463a207b8e5f8%2Fed98ff7e99bc4e99a7c401332ea6be22?format=webp&width=800"
+                alt="Takoradi Technical University Logo"
+                className="h-16 w-16 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-lg"
+              />
+              <div className="text-left">
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-white to-yellow-400">
+                  Lost & Found
+                </h3>
+                <p className="text-sm text-slate-300">Takoradi Technical University</p>
               </div>
-              <p className="text-sm text-slate-600 text-center md:text-left">
-                Reconnecting TTU community
-              </p>
             </div>
-            <div className="flex flex-col items-center md:items-end">
-              <h4 className="font-semibold text-slate-900 mb-3">Get Help</h4>
-              <p className="text-sm text-slate-600">Have questions?</p>
-              <p className="text-sm text-slate-600">Contact us anytime</p>
+            
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+              Reconnecting the TTU community, one item at a time
+            </p>
+
+            {/* Contact section */}
+            <div className="inline-flex flex-col items-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+              <h4 className="font-semibold text-white">Need Help?</h4>
+              <p className="text-sm text-slate-300">We're here to assist you</p>
+              <p className="text-xs text-slate-400">Contact us anytime</p>
             </div>
           </div>
-          <div className="border-t border-slate-200 pt-8">
-            <p className="text-center text-slate-600 text-sm">
-              &copy; 2025 Takoradi Technical University Lost & Found. Help your community find what matters.
+
+          {/* Divider */}
+          <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8"></div>
+
+          {/* Bottom section */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-slate-400">
+              &copy; 2025 Takoradi Technical University
+            </p>
+            <p className="text-sm text-slate-400 text-center md:text-right">
+              Built with <span className="text-red-400">❤</span> for the TTU Community
             </p>
           </div>
         </div>
