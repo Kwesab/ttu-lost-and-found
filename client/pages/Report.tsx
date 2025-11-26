@@ -108,9 +108,10 @@ export default function Report() {
     
     try {
       // Delete from Cloudinary
-      const publicId = encodeURIComponent(image.publicId);
-      await fetch(`/api/upload/${publicId}`, {
+      await fetch(`/api/upload`, {
         method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ publicId: image.publicId }),
       });
 
       // Remove from state

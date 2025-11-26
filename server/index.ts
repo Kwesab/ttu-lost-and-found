@@ -43,7 +43,7 @@ export function createServer() {
 
   // Upload routes
   app.post("/api/upload", handleUpload);
-  app.delete("/api/upload/:publicId", handleDelete);
+  app.delete("/api/upload", handleDelete);
 
   return app;
 }

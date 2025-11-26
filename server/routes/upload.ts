@@ -48,7 +48,7 @@ export const handleUpload: RequestHandler = async (req, res) => {
 
 export const handleDelete: RequestHandler = async (req, res) => {
   try {
-    const { publicId } = req.params;
+    const { publicId } = req.body;
 
     if (!publicId) {
       res.status(400).json({ error: "No public ID provided" });
